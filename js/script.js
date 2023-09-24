@@ -836,6 +836,12 @@ const installmentCardTitle = new Same({
   breakpoint: 711,
 });
 
+const intermediaryProcessItem = new Same({
+  same: "width",
+  selector: ".intermediary-process__item",
+  breakpoint: false,
+});
+
 ;// CONCATENATED MODULE: ./src/js/modules/scrolling.js
 
 
@@ -1142,6 +1148,50 @@ upButton?.addEventListener("click", () => {
   headerLogo?.focus();
 });
 
+;// CONCATENATED MODULE: ./src/js/scripts/scripts/intermediary.js
+/** @type {HTMLDivElement} */
+const intermediaryOrders = document.querySelector(".intermediary-orders");
+
+if (intermediaryOrders) {
+  /** @type {HTMLDivElement} */
+  const intermediaryOrdersCaptionBig = intermediaryOrders.querySelector(".intermediary-orders__caption--big");
+  /** @type {HTMLOListElement} */
+  const intermediaryProcess = intermediaryOrders.querySelector(".intermediary-process");
+
+  if (intermediaryProcess) {
+    /** @type {NodeListOf<HTMLLIElement>} */
+    const intermediaryProcessItems = intermediaryProcess.querySelectorAll(".intermediary-process__item");
+
+    if (intermediaryProcessItems.length) {
+      const intermediaryProcessResizeObserver = new ResizeObserver(entries => {
+        entries.forEach(entry => {
+          /** @type {HTMLLIElement[]} */
+          const intermediaryProcessItemsArray = [...intermediaryProcessItems];
+          const intermediaryProcessItemsSpaceBetween = intermediaryProcessItemsArray.map((item, index, array) => {
+            const intermediaryProcessItemLeft = item.getBoundingClientRect().left;
+            const intermediaryProcessNextItemLeft = array[index + 1]?.getBoundingClientRect().left;
+
+            if (intermediaryProcessNextItemLeft) {
+              return intermediaryProcessNextItemLeft - intermediaryProcessItemLeft;
+            }
+          }).filter(Boolean);
+          const sameWidth = intermediaryProcessItemsArray[0].style.getPropertyValue("--same-width");
+
+          intermediaryProcessItemsSpaceBetween?.forEach((number, index) => {
+            intermediaryProcessItemsArray[index].style.setProperty("--space-between", `${number}px`);
+          });
+
+          if (sameWidth && intermediaryOrdersCaptionBig) {
+            intermediaryOrdersCaptionBig.style.setProperty("--margin-inline", sameWidth);
+          }
+        });
+      });
+
+      intermediaryProcessResizeObserver.observe(intermediaryProcess);
+    }
+  }
+}
+
 // EXTERNAL MODULE: ./src/js/modules/spoilers.js
 var spoilers = __webpack_require__(635);
 ;// CONCATENATED MODULE: ./src/js/scripts/scripts/spoilers.js
@@ -1150,6 +1200,7 @@ var spoilers = __webpack_require__(635);
 const spoilers_spoilers = new spoilers/* Spoilers */.r();
 
 ;// CONCATENATED MODULE: ./src/js/scripts/scripts.js
+
 
 
 
