@@ -354,10 +354,10 @@ body {
 
 .wrapper::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -2;
-  background-image: radial-gradient(378.5px 367.5px at 423.5px -89.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 940.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 2367.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 4067.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 5067.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 8067.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 9067.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 10067.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 11067.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 11888.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 12888.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 13888.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 374.5px 15229.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 374.5px 16642.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 160.5px 21263.5px, #0d3a45, 75%, rgba(13, 58, 69, 0));
+  background-image: radial-gradient(378.5px 367.5px at 378.5px -2.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 363.5px 717.5px, #0d3a45, 75%, rgba(13, 58, 69, 0));
   -webkit-filter: blur(100px);
   filter: blur(100px);
   -webkit-transform: translate3d(0, 0, 0);
@@ -366,7 +366,7 @@ body {
 
 .wrapper::after {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -1;
   -webkit-backdrop-filter: blur(50px);
@@ -1382,7 +1382,7 @@ html:not(.scrolled) .up {
   }
 
   .wrapper::before {
-    background-image: radial-gradient(378.5px 367.5px at 341.5px -13.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(378.5px 367.5px at 1466.5px 805.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(553.5px 313px at 417.5px 1245px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(489px 421.5px at -36px 2378.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 1023.5px 2960px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 357.5px 4243px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 1017.5px 5486px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 342.5px 5774px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 1002.5px 6977px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 342.5px 8614px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 1002.5px 9857px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 342.5px 12444px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 1002.5px 13687px, #0d3a45, 75%, rgba(13, 58, 69, 0));
+    background-image: radial-gradient(378.5px 367.5px at 341.5px -13.5px, #0d3a45, 75%, rgba(13, 58, 69, 0)), radial-gradient(618.5px 541px at 1002.5px 979px, #0d3a45, 75%, rgba(13, 58, 69, 0));
   }
 
   .header-nav {
